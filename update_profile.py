@@ -78,7 +78,7 @@ def fetch_stats():
     # contributionsCollection spans at most a year, so ask once per calendar year
     years = "\n".join(
         f'y{y}: contributionsCollection(from: "{y}-01-01T00:00:00Z", to: "{y + 1}-01-01T00:00:00Z")'
-        " { totalCommitContributions restrictedContributionsCount }"
+        " { totalCommitContributions }"
         for y in range(joined.year, datetime.now(timezone.utc).year + 1)
     )
     contrib = graphql(f'query {{ user(login: "{USER}") {{ {years} }} }}')["user"]
@@ -89,7 +89,7 @@ def fetch_stats():
         "repos": u["repositories"]["totalCount"],
         "contributed": u["repositoriesContributedTo"]["totalCount"],
         "stars": sum(n["stargazerCount"] for n in u["repositories"]["nodes"]),
-        "commits": sum(v["totalCommitContributions"] + v["restrictedContributionsCount"] for v in contrib.values()),
+        "commits": sum(v["totalCommitContributions"] for v in contrib.values()),  # public repos only
     }
     stats.update(loc([n["name"] for n in u["repositories"]["nodes"] if not n["isFork"]], u["id"]))
     return stats
