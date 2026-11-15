@@ -10,7 +10,7 @@ A business major turned prompt engineer who wants to innovate and automate life 
 
 #### Projects
 
-**[gh-offload](https://github.com/lawless-commits/gh-offload)**: run your uncommitted code on GitHub's Linux, ARM, macOS and Windows runners, straight from your terminal. I built it because my 8 GB laptop couldn't finish a release build of my own project.
+**[gh-offload](https://github.com/lawless-commits/gh-offload)**: run your uncommitted code on GitHub's Linux, ARM, macOS and Windows runners, straight from your terminal. I built it because my 8 GB laptop couldn't finish a release build of my own project(please send ram).
 
 [![gh-offload: one command builds your working tree on a GitHub ARM runner and brings the binary back](https://raw.githubusercontent.com/lawless-commits/gh-offload/main/docs/social-preview.png)](https://github.com/lawless-commits/gh-offload)
 
