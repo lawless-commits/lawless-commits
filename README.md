@@ -1,3 +1,9 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="dark_mode.svg">
+  <source media="(prefers-color-scheme: light)" srcset="light_mode.svg">
+  <img alt="lawless-commits: neofetch-style profile card with live GitHub stats" src="dark_mode.svg">
+</picture>
+
 ### Hi, I'm LAW7A
 
 A business major turned prompt engineer who wants to innovate and automate life as much as possible. I build small developer tools that take the busywork out of shipping software.
